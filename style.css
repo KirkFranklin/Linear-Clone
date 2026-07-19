@@ -1,0 +1,283 @@
+/* 1. Global Reset & Box Model */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Style Variables (Linear Theme) */
+:root {
+    --bg-color: #080710;
+    --text-primary: #ffffff;
+    --text-secondary: #b4bcd0;
+    --accent-purple: #5e6ad2;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 3. Base Body Setup */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-stack);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   4. Header & Navigation (Flexbox Layout)
+   ========================================================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, nav links to center, buttons to right */
+    align-items: center;            /* Centers everything vertically */
+    padding: 0 2rem;
+    height: 64px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: rgba(8, 7, 16, 0.8); /* Semi-transparent background for glassy look */
+    backdrop-filter: blur(12px);          /* Frosted glass effect */
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Creates clean spacing between each link without margins */
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary); /* Smooth highlight shift on hover */
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ==========================================================================
+   5. Button Components
+   ========================================================================== */
+button {
+    font-family: var(--font-stack);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+    color: var(--text-primary);
+}
+
+.btn-primary {
+    background-color: var(--accent-purple);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(94, 106, 210, 0.3); /* Subtle purple glow */
+}
+
+.btn-primary:hover {
+    background-color: #6e7be2; /* Marginally lighter purple for interaction response */
+    transform: translateY(-1px); /* Micro-interaction: lifts button slightly */
+}
+
+
+/* ==========================================================================
+   6. Hero Section (Typography & Alignment)
+   ========================================================================== */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(85vh - 64px); /* Fills most of the screen minus the header height */
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto; /* Centers the whole container on ultra-wide screens */
+}
+
+/* Linear-style Pill Badge */
+.badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Giant, High-Impact Headline */
+.hero-section h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Fluid typography: adjusts smoothly between 2.5rem and 4.5rem depending on screen size */
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Creates the premium metallic text gradient */
+}
+
+/* Sub-headline Paragraph */
+.hero-section p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.hero-cta .btn-primary {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   7. Features Section & Bento Grid (CSS Grid Layout)
+   ========================================================================== */
+.features-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-label {
+    color: var(--accent-purple);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* The Core Grid System */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns on desktop */
+    gap: 1.5rem;                           /* Clean gutter spacing between tiles */
+}
+
+/* Individual Tile Styling */
+.bento-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card:hover {
+    border-color: rgba(94, 106, 210, 0.4); /* Subtly lights up the border on hover */
+    transform: translateY(-2px);           /* Clean micro-lift movement */
+}
+
+/* Layout Utilities for Asymmetry */
+.col-span-2 {
+    grid-column: span 2; /* Tells this specific card to take up two column tracks */
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   8. Responsive Design (Mobile Breakpoints)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .bento-grid {
+        grid-template-columns: 1fr; /* Collapses the 3-column layout into a single column stack for tablets/phones */
+    }
+    
+    .col-span-2 {
+        grid-column: span 1; /* Resets wide cards to fit perfectly in a single row on smaller screens */
+    }
+}
+
+/* ==========================================================================
+   9. Premium Micro-Interactions & Ambient Glow
+   ========================================================================== */
+
+/* This decorative element stays completely invisible until a user hovers over the card */
+.glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        800px circle at var(--x, 50%) var(--y, 50%), 
+        rgba(94, 106, 210, 0.06), 
+        transparent 40%
+    );
+    z-index: 1;
+    pointer-events: none; /* Ensures the glow never blocks user text selection or clicks */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Ensure card content stays cleanly layered on top of the background glow */
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Reveal the glowing background gradient smoothly on hover */
+.bento-card:hover .glow-effect {
+    opacity: 1;
+}
