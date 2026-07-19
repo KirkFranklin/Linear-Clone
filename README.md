@@ -2,10 +2,10 @@
 
 A pixel-perfect, highly responsive dark-mode landing page clone modeled after the iconic Linear platform interface design. Built from scratch to demonstrate modern CSS layout strategies, fluid typography, and premium user interface engineering.
 
-## 🚀 Live Demo
-*Link will be added here in the next step!*
+##  Live Demo
+(https://linear-clone-smoky.vercel.app/)
 
-## 🛠️ Tech Stack & Architecture
+##  Tech Stack & Architecture
 *   **HTML5:** Structured using strict semantic elements (`<header>`, `<main>`, `<section>`, `<nav>`) to ensure accessibility (a11y) and SEO optimization.
 *   **CSS3 Custom Properties:** Engineered using global CSS variables for clean design-system token management (colors, spacing, typography) and easy theme scalability.
 *   **CSS Grid (Bento Box Layout):** Implemented an asymmetric grid system for the feature section to handle multi-dimensional element spanning without bloated HTML wrappers.
