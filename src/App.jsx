@@ -4,6 +4,7 @@ import Hero from './components/Hero.jsx';
 import WorkflowsTab from './components/WorkflowsTab.jsx';
 import FeaturesGrid from './components/FeaturesGrid.jsx';
 import Pricing from './components/Pricing.jsx';
+import FAQ from './components/FAQ.jsx';
 import Footer from './components/Footer.jsx';
 import Modal from './components/Modal.jsx';
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
         <WorkflowsTab />
         <FeaturesGrid />
         <Pricing onOpenModal={handleOpenModal} />
+        <FAQ />
       </main>
       <Footer />
       
