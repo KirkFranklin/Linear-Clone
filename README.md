@@ -1,22 +1,16 @@
-# Linear Landing Page Clone
+# React + Vite
 
-A pixel-perfect, highly responsive dark-mode landing page clone modeled after the iconic Linear platform interface design. Built from scratch to demonstrate modern CSS layout strategies, fluid typography, and premium user interface engineering.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-##  Live Demo
-(https://linear-clone-smoky.vercel.app/)
+Currently, two official plugins are available:
 
-##  Tech Stack & Architecture
-*   **HTML5:** Structured using strict semantic elements (`<header>`, `<main>`, `<section>`, `<nav>`) to ensure accessibility (a11y) and SEO optimization.
-*   **CSS3 Custom Properties:** Engineered using global CSS variables for clean design-system token management (colors, spacing, typography) and easy theme scalability.
-*   **CSS Grid (Bento Box Layout):** Implemented an asymmetric grid system for the feature section to handle multi-dimensional element spanning without bloated HTML wrappers.
-*   **CSS Flexbox:** Utilized for precise one-dimensional alignment across the global navigation axis and the centered hero container.
-*   **Fluid Typography & Mobile-First Design:** Leveraged CSS `clamp()` functions for seamless font scaling and media queries to ensure an interface that collapses elegantly across mobile, tablet, and desktop viewports.
-*   **Hardware-Accelerated Micro-Interactions:** Implemented an optimized JavaScript mouse-tracking event listener that updates CSS custom properties in real time, rendering a custom radial gradient glow effect that tracks the cursor on hover.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 💻 Local Setup Instructions
+## React Compiler
 
-To run this project locally on your machine:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/KirkFranklin/Linear-Clone.git](https://github.com/KirkFranklin/Linear-Clone.git)
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

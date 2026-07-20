@@ -1,15 +1,11 @@
 :root {
-  /* Linear Dark Theme Palette */
   --bg-dark-base: #080710;
   --bg-dark-surface: #12111a;
   --text-main: #f7f8f8;
   --text-muted: #8a8f98;
-  
-  /* Brand Gradients & Accents */
   --brand-purple: #5e6ad2;
   --brand-glow: radial-gradient(circle at top, rgba(94, 106, 210, 0.15) 0%, transparent 60%);
   --border-glow: rgba(255, 255, 255, 0.08);
-  
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -28,7 +24,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Premium Layout Utilities */
 .section-container {
   max-width: 1200px;
   margin: 0 auto;

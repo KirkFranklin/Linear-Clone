@@ -1,99 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linear Clone — Portfolio Project</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Semantic Header: Holds branding and navigation axis -->
-    <header class="main-header">
-        <div class="logo">Linear</div>
-        <nav class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#method">Method</a>
-            <a href="#customers">Customers</a>
-            <a href="#changelog">Changelog</a>
-        </nav>
-        <div class="nav-actions">
-            <button class="btn-secondary">Log in</button>
-            <button class="btn-primary">Sign up</button>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main>
-        <!-- Hero Section: The high-impact introduction -->
-        <section class="hero-section">
-            <div class="badge">Linear 2026 Product Release</div>
-            <h1>Linear is a better way<br>to build products</h1>
-            <p>Meet the new standard for modern software development. Streamline issues, sprints, and product roadmaps.</p>
-            <div class="hero-cta">
-                <button class="btn-primary">Get Started</button>
-            </div>
-        </section>
-
-        <!-- Features Grid: The Bento Box Layout -->
-        <section id="features" class="features-section">
-            <div class="section-header">
-                <span class="section-label">Features</span>
-                <h2>Engineered for the future</h2>
-            </div>
-
-            <div class="bento-grid">
-                <!-- Card 1 -->
-                <div class="bento-card col-span-2">
-                    <div class="glow-effect"></div>
-                    <div class="card-content">
-                        <h3>Issue Tracking</h3>
-                        <p>Create tasks in seconds. Keyboard shortcuts allow you to fly through managing your backlog without ever lifting your hands.</p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bento-card">
-                    <div class="glow-effect"></div>
-                    <div class="card-content">
-                        <h3>Cycles & Sprints</h3>
-                        <p>Automate your sprint planning. Keep your team aligned and focused on the immediate milestones ahead.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bento-card">
-                    <div class="glow-effect"></div>
-                    <div class="card-content">
-                        <h3>Command Line Speed</h3>
-                        <p>A built-in command menu gives you instantaneous control over every single action in the application.</p>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bento-card col-span-2">
-                    <div class="glow-effect"></div>
-                    <div class="card-content">
-                        <h3>Roadmaps</h3>
-                        <p>Cross-team visibility out of the box. Plan large-scale initiatives and track real-time progress against target completion dates seamlessly.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        document.querySelectorAll('.bento-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                card.style.setProperty('--x', `${x}px`);
-                card.style.setProperty('--y', `${y}px`);
-            });
-        });
-    </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>linear</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
