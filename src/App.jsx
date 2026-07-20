@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import FeaturesGrid from './components/FeaturesGrid.jsx';
+import WorkflowsTab from './components/WorkflowsTab.jsx';
 import Footer from './components/Footer.jsx';
 import Modal from './components/Modal.jsx';
 import './App.css';
@@ -20,6 +21,7 @@ function App() {
       <Navbar onOpenModal={handleOpenModal} />
       <main style={{ paddingTop: '140px' }}>
         <Hero onOpenModal={handleOpenModal} />
+        <WorkflowsTab />
         <FeaturesGrid />
       </main>
       <Footer />

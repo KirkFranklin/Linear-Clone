@@ -1,0 +1,134 @@
+.workflows-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-subtitle {
+  color: var(--brand-purple);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Tabs */
+.tab-buttons-container {
+  display: inline-flex;
+  padding: 0.35rem;
+  border-radius: 9999px;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Tab Card */
+.tab-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 2.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.tab-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.tab-tag {
+  color: #8b95f6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.tab-stats {
+  background: rgba(94, 106, 210, 0.15);
+  color: var(--text-muted);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.tab-card-title {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.tab-card-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Mock Terminal Preview */
+.mock-preview {
+  background: #0d0c14;
+  border: 1px solid var(--border-glow);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preview-dot-group {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.preview-code code {
+  color: #8b95f6;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
